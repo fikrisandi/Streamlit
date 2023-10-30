@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import pyplot
 import matplotlib.pyplot as plt
 # from ydata_profiling import ProfileReport
 # from streamlit_pandas_profiling import st_profile_report
@@ -83,5 +84,5 @@ def app():
     value_counts = data['default_payment_next_month'].value_counts()
 
     # Buat grafik batang menggunakan Plotly Express
-    fig = px.bar(x=value_counts.index, y=value_counts.values, labels={'x': 'Status Pembayaran Berikutnya', 'y': 'Jumlah'})
+    fig = pyplot.bar(x=value_counts.index, y=value_counts.values, labels={'x': 'Status Pembayaran Berikutnya', 'y': 'Jumlah'})
     st.plotly_chart(fig)
