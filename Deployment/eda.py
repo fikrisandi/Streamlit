@@ -33,7 +33,7 @@ def app():
         unsafe_allow_html=True  # Mengizinkan penggunaan HTML
     )
 
-    data = pd.read_csv('../P1G5_Set_1_fikri.csv')
+    data = pd.read_csv('P1G5_Set_1_fikri.csv')
     st.dataframe(data)
 
     st.markdown('---')
